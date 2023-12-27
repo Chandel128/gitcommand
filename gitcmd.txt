@@ -1,0 +1,428 @@
+GIT
+Apurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos/titanwork
+$ git init
+Initialized empty Git repository in D:/gitrepos/titanwork/.git/
+ touch pluto/taster89 #######to create a file directly in a directly
+ git status
+ $ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        jupiter/
+        nebula/
+        pluto/
+        saturn1.py
+        saturn10.py
+        saturn2.py
+        saturn3.py
+        saturn4.py
+        saturn5.py
+        saturn6.py
+        saturn7.py
+        saturn8.py
+        saturn9.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+it shows untracked files so we have to made them track first
+$ git commit -m "new files committed"   ######every time you commit anything you have to write a message
+Apurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos/titanwork (master)
+$ git commit -m "new files committed"
+[master (root-commit) 9d9691f] new files committed
+ 13 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 jupiter/test1
+ create mode 100644 nebula/testtter32
+ create mode 100644 pluto/taster89
+ create mode 100644 saturn1.py
+ create mode 100644 saturn10.py
+ create mode 100644 saturn2.py
+ create mode 100644 saturn3.py
+ create mode 100644 saturn4.py
+ create mode 100644 saturn5.py
+ create mode 100644 saturn6.py
+ create mode 100644 saturn7.py
+ create mode 100644 saturn8.py
+ create mode 100644 saturn9.py
+ 
+ ####GO TO GITHUB AND THEN CREATE A REPOSITORY
+ Apurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos/titanwork (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Apurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos/titanwork (master)
+$ git remote add origin https://github.com/Chandel128/titanwork.git
+
+Apurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos/titanwork (master)
+$ cat .git/config
+[core]
+        repositoryformatversion = 0
+        filemode = false
+        bare = false
+        logallrefupdates = true
+        symlinks = false
+        ignorecase = true
+[remote "origin"]
+        url = https://github.com/Chandel128/titanwork.git
+        fetch = +refs/heads/*:refs/remotes/origin/*
+#######How to connect your local repository to the remote repositoryApurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos/titanwork (master)
+$ git branch -M main
+
+Apurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos/titanwork (main)
+$ git push -u origin main
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (6/6), 487 bytes | 16.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Chandel128/titanwork.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+
+Now how to change a file ad push it to remote
+Apurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos/titanwork (main)
+$ vi saturn1.py
+
+Apurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos/titanwork (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   saturn1.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Apurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos/titanwork (main)
+$ git add saturn1.py
+warning: in the working copy of 'saturn1.py', LF will be replaced by CRLF the next time Git touches it
+
+Apurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos/titanwork (main)
+$ git commit -m "satur mooons."
+[main ab16770] satur mooons.
+ 1 file changed, 6 insertions(+)
+
+Apurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos/titanwork (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 295 bytes | 295.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Chandel128/titanwork.git
+   9d9691f..ab16770  main -> main
+
+TO SEE LOGS AND CHANGES IN LOCAL REPOSITORY
+$ git log
+commit ab1677067c0773ffae0389d8f279a2ebbcaa915b (HEAD -> main, origin/main)
+Author: Rohit Chandel <rohitchandel944@gmail.com>
+Date:   Wed Dec 27 11:44:35 2023 +0530
+
+    satur mooons.
+
+commit 9d9691fb10140ee8cc262f58418b5337c0c10a09
+Author: Rohit Chandel <rohitchandel944@gmail.com>
+Date:   Wed Dec 27 11:28:43 2023 +0530
+
+    new files committed
+
+Apurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos/titanwork (main)
+$ git log --oneline
+ab16770 (HEAD -> main, origin/main) satur mooons.
+9d9691f new files committed
+
+Apurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos/titanwork (main)
+$ git show ab16770
+commit ab1677067c0773ffae0389d8f279a2ebbcaa915b (HEAD -> main, origin/main)
+Author: Rohit Chandel <rohitchandel944@gmail.com>
+Date:   Wed Dec 27 11:44:35 2023 +0530
+
+    satur mooons.
+
+diff --git a/saturn1.py b/saturn1.py
+index e69de29..1f4036e 100644
+--- a/saturn1.py
++++ b/saturn1.py
+@@ -0,0 +1,6 @@
++Saturn hhas many  names
++1
++2
++3
++3
++
+
+
+you can make changes in remote repo and pull in local repo
+git pull
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 684 bytes | 1024 bytes/s, done.
+From https://github.com/Chandel128/bashscripts
+   267385e..d9ce704  main       -> origin/main
+Updating 267385e..d9ce704
+Fast-forward
+ data | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+
+
+
+###########
+Branches
+let one dev working on one feature other one on another so you do not want to disturb the stable copy of code .
+Apurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos/titanwork (main)
+$ git branch -c sprint1
+
+Apurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos/titanwork (main)
+$ git branch -a
+* main
+  sprint1
+  remotes/origin/main
+
+Apurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos/titanwork (main)
+$ git checkout sprint1
+Switched to branch 'sprint1'
+Your branch is up to date with 'origin/main'.
+
+Apurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos/titanwork (sprint1)
+$ ls
+jupiter/  nebula/  pluto/  saturn1.py  saturn10.py  saturn2.py  saturn3.py  saturn4.py  saturn5.py  saturn6.py  saturn7.py  saturn8.py  saturn9.py
+
+Apurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos/titanwork (sprint1)
+Apurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos/titanwork (sprint1)
+$ ls
+jupiter/  nebula/  pluto/  saturn1.py  saturn10.py  saturn2.py  saturn3.py  saturn4.py  saturn5.py  saturn6.py  saturn7.py  saturn8.py  saturn9.py
+
+Apurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos/titanwork (sprint1)
+$ git rm saturn3.py saturn7.py saturn6.py
+rm 'saturn3.py'
+rm 'saturn6.py'
+rm 'saturn7.py'
+
+Apurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos/titanwork (sprint1)
+$ git mv saturn1
+saturn1.py   saturn10.py
+
+Apurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos/titanwork (sprint1)
+$ git mv saturn1
+saturn1.py   saturn10.py
+
+Apurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos/titanwork (sprint1)
+$ git mv saturn1
+saturn1.py   saturn10.py
+
+Apurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos/titanwork (sprint1)
+$ git mv saturn1.py saturn11.py
+
+Apurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos/titanwork (sprint1)
+$ touch jupiter{1..4}.rb
+
+Apurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos/titanwork (sprint1)
+$ ls
+jupiter/  jupiter1.rb  jupiter2.rb  jupiter3.rb  jupiter4.rb  nebula/  pluto/  saturn10.py  saturn11.py  saturn2.py  saturn4.py  saturn5.py  saturn8.py  saturn9.py
+
+Apurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos/titanwork (sprint1)
+$ git status
+On branch sprint1
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    saturn1.py -> saturn11.py
+        deleted:    saturn3.py
+        deleted:    saturn6.py
+        deleted:    saturn7.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        jupiter1.rb
+        jupiter2.rb
+        jupiter3.rb
+        jupiter4.rb
+
+
+Apurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos/titanwork (sprint1)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+Apurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos/titanwork (sprint1)
+$ git add .
+
+Apurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos/titanwork (sprint1)
+$ git commit -m "jupiter changes"
+[sprint1 dbbc459] jupiter changes
+ 5 files changed, 0 insertions(+), 0 deletions(-)
+ rename saturn3.py => jupiter1.rb (100%)
+ rename saturn6.py => jupiter2.rb (100%)
+ rename saturn7.py => jupiter3.rb (100%)
+ create mode 100644 jupiter4.rb
+ rename saturn1.py => saturn11.py (100%)
+
+Apurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos/titanwork (sprint1)
+$ git push origin sprint1
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 286 bytes | 286.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'sprint1' on GitHub by visiting:
+remote:      https://github.com/Chandel128/titanwork/pull/new/sprint1
+remote:
+To https://github.com/Chandel128/titanwork.git
+ * [new branch]      sprint1 -> sprint1
+
+Apurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos/titanwork (sprint1)
+$ git pull
+From https://github.com/Chandel128/titanwork
+ * [new branch]      sprint2    -> origin/sprint2
+Already up to date.
+
+Apurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos/titanwork (sprint1)
+$ ls
+jupiter/  jupiter1.rb  jupiter2.rb  jupiter3.rb  jupiter4.rb  nebula/  pluto/  saturn10.py  saturn11.py  saturn2.py  saturn4.py  saturn5.py  saturn8.py  saturn9.py
+
+Apurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos/titanwork (sprint1)
+$ git checkout sprint2
+Switched to a new branch 'sprint2'
+branch 'sprint2' set up to track 'origin/sprint2'.
+
+Apurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos/titanwork (sprint2)
+$ ls
+jupiter/  jupiter1.rb  jupiter2.rb  jupiter3.rb  jupiter4.rb  nebula/  pluto/  saturn10.py  saturn11.py  saturn2.py  saturn4.py  saturn5.py  saturn8.py  saturn9.py
+
+Apurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos/titanwork (sprint2)
+$
+
+##to swith b/n branches
+git switch sprint1
+git checkout sprint1
+changes you have done in sprint branch merge into main branch
+git merge sprint1
+you can create .gitignore file to keep unwanted files
+git push --all origin #####to push everything
+
+
+
+#############Clone##########
+rm -rf titawork
+git clone url
+git clone https://github.com/Chandel128/titanwork.git
+
+##############Rollback##############
+make changes in a file
+now save it
+git checkout will rollback
+Apurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos/titanwork (main)
+$ vi jupiter1.rb
+
+Apurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos/titanwork (main)
+$ git checkout jupiter1.rb
+Updated 1 path from the index
+
+Apurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos/titanwork (main)
+$ cat jupiter1.rb
+
+ git restore --staged jupiter1.rb
+ git diff --cached
+ 
+ ########git ssh login##########
+ $ ssh-keygen.exe
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/c/Users/Apurva/.ssh/id_ed25519):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/Apurva/.ssh/id_ed25519
+Your public key has been saved in /c/Users/Apurva/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:wIeL4XleED7ZlFGQ92ng/xzy4fp+5S4bhOmuCf3sgLI Apurva@DESKTOP-Q66CJBJ
+The key's randomart image is:
++--[ED25519 256]--+
+|      . +*.      |
+|     o *o o      |
+|    . O oo o .   |
+|   . + *  . +o   |
+|    + o S  oo .  |
+|     o . o .o.o .|
+|      o o o .*.+.|
+|       o . *  *.o|
+|      E   oo*++=.|
++----[SHA256]-----+
+
+Apurva@DESKTOP-Q66CJBJ MINGW64 ~
+$ cat .ssh/id_ed25519.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBZ20NKG+TYPkouanZbSEuzUWzQVK0cyVdOdV9nt6ATk Apurva@DESKTOP-Q66CJBJ
+
+ADD THIS KEY I SETTINGS SSH KEY AND GPG KEY ADD A NEW KEY
+
+Apurva@DESKTOP-Q66CJBJ MINGW64 ~
+$ cd /d/gitrepos/
+
+Apurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos
+$ rm -rf titanwork/
+
+Apurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos
+$ git clone git@github.com:Chandel128/titanwork.git
+Cloning into 'titanwork'...
+The authenticity of host 'github.com (64:ff9b::14cf:4952)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? y
+Please type 'yes', 'no' or the fingerprint: y
+Please type 'yes', 'no' or the fingerprint: yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+remote: Enumerating objects: 13, done.
+remote: Counting objects: 100% (13/13), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 13 (delta 3), reused 12 (delta 2), pack-reused 0
+Receiving objects: 100% (13/13), done.
+Resolving deltas: 100% (3/3), done.
+
+Apurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos
+$ ls
+bashscripts/  titanwork/
+
+Apurva@DESKTOP-Q66CJBJ MINGW64 /d/gitrepos
+
+vi jupiter1.rb
+  465  cat jupiter1.rb
+  466  git checkout jupiter1.rb
+  467  cat jupiter1.rb
+  468  vi jupiter1.rb
+  469  cat jupiter1.rb
+  470  git status
+  471  git diff
+  472  git status
+  473  git diff
+  474  git add .
+  475  git status
+  476  git diff --cached
+  477  git restore --staged jupiter1.rb
+  478  git diff
+  479  git status
+  480  git add .
+  481  git commit "one"
+  482  git diff
+  483  git log --oneline
+  484  gitt diff dbbc459
+  485  git diff dbbc459
+  486  git revert HEAD
+  487  history
+
+
+
